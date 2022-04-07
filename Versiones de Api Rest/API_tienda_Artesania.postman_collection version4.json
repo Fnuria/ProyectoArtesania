@@ -1,0 +1,1376 @@
+{
+	"info": {
+		"_postman_id": "293a1519-97ff-46a5-9a9c-ce048c727354",
+		"name": "API_tienda_Artesania",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "select_usuarios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NOM_USUARIO\":\"MPEREZ\",\r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nuevo_usuarios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n       \"NOM_PERSONA\": \"MARCO PEREZ\",\r\n        \"USER_EMAIL\": \"PEREZSOLORZANO@GMAIL.CON\",\r\n        \"NUM_CEL\": 3395114,\r\n        \"NOM_USUARIO\":\"marco.m\",\r\n        \"CLAVE\": \"123\",\r\n        \"NOM_IDENTIFICACION\": \"DNI\",\r\n        \"COD_IDENTIFICACION\":\"0909199012435\",\r\n        \"DIRECCION\": \"CIUDAD ESPANA\",\r\n        \"COD_ROL\": 1,\r\n        \"COD_ESTADO\": 1,\r\n        \"COD_MODULO\": 1,\r\n        \"COD_USUARIO\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuarios/nuevo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"nuevo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar_usuarios",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"COD_PERSONA\": 1,\r\n    \"NOM_PERSONA\": \"PACO PEDRO PEREZ \",\r\n    \"USER_EMAIL\": \"PEREZSOLORZANO@GMAIL.CON\",\r\n    \"NUM_CEL\": 3395114,\r\n    \"NOM_USUARIO\": \"MPSOLORZANO\",\r\n    \"NOM_IDENTIFICACION\": \"DNI\",\r\n    \"COD_IDENTIFICACION\": \"0909199012435\",\r\n    \"DIRECCION\": \"CIUDAD ESPANA\",\r\n    \"COD_ROL\": 1,\r\n    \"COD_ESTADO\": 1,\r\n    \"COD_DIRECCION\": 1,\r\n    \"COD_TIP_IDENTIFICACION\": 1,\r\n    \"COD_USUARIO\": 1,\r\n    \"COD_MODULO\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuarios/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscar_usuarios_nombre",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NOM_USUARIO\":\"m.m\",\r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuarios/buscar_usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"buscar_usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "select_contactos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"NOM_USUARIO\":\"MPEREZ\",\r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/contactos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contactos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nuevo_contacto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"TIP_ASUNTO\":\"informacion de los jarrones\", \r\n    \"USER_EMAIL\": \"mperez@gmail.com\", \r\n    \"NUM_CEL\":332225, \r\n    \"DES_MENSAJE\":\"Cotizacion de los jarrones\", \r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/contactos/nuevo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contactos",
+						"nuevo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar_contacto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"COD_CONTACTO\":2,\r\n    \"TIP_ASUNTO\":\"informacion de jarron\", \r\n    \"USER_EMAIL\": \"mperez@gmail.com\", \r\n    \"NUM_CEL\":332225, \r\n    \"DES_MENSAJE\":\"Cotizacion de los jarrones\", \r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/contactos/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contactos",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar_contactos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"COD_CONTACTO\":3,\r\n    \"NOM_USUARIO\":\"MPEREZ\",\r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/contactos/eliminar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contactos",
+						"eliminar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nueva_pregunta_seguridad",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n       \"DES_PREGUNTA\":\"COMO SE LLAMA MI MASCOTA\",\r\n        \"DES_RESPUESTA\":\"BRUNO\", \r\n        \"NOM_USUARIO\":\"NLOPEZ\",\r\n        \"COD_USUARIO\":1,\r\n        \"COD_MODULO\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuarios/nueva_pregunta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"nueva_pregunta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar_pregunta_seguridad",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"DES_PREGUNTA\":\"COMO SE LLAMA MI MASCOTA\",\r\n        \"DES_RESPUESTA\":\"MAYA\", \r\n        \"NOM_USUARIO\":\"NLOPEZ\",\r\n        \"COD_USUARIO\":1,\r\n        \"COD_MODULO\":1,\r\n        \"COD_PREGUNTAS\":10,\r\n        \"COD_RESPUESTA\":1,\r\n        \"COD_ESTADO\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuarios/actualizar_pregunta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"actualizar_pregunta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "select_preguntas_seguridad",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"NOM_USUARIO\":\"MPEREZ\",\r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuarios/seguridad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"seguridad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar_clave",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CLAVE\":\"Baleada\",\r\n    \"NOM_USUARIO\":\"macarinalopezw1\",\r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuarios/actualizar_clave",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"actualizar_clave"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TOKEN_SECRET",
+						"value": "Estaeslaclavesecreta",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NOM_USUARIO\":\"macarinalopezw1\",\r\n    \"CLAVE\":\"Baleada\",\r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjpbeyJDT0RfVVNVQVJJT1MiOjEsIk5PTV9VU1VBUklPIjoibWFjYXJpbmFsb3BlencxIiwiQ0xBVkUiOiJCYWxlYWRhIiwiQ09EX0VTVEFETyI6MSwiQ09EX1JPTCI6MX1dLCJpZCI6IjEiLCJwZXJmaWwiOiJhZG1pbiIsImJpZW52ZW5pZGEiOiIxIiwiaWF0IjoxNjQ2MTgyODkzfQ.fFrmn4J9etU93hYtTA2gaB_u18_orWLDKE2TL65jO5g",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "select_roles",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJDT0RfVVNVQVJJT1MiOjEsIk5PTV9VU1VBUklPIjoibWFjYXJpbmFsb3BlencxIiwiQ0xBVkUiOiJCYWxlYWRhIiwiQ09EX0VTVEFETyI6MSwiQ09EX1JPTCI6MX1dLCJpYXQiOjE2NDYxOTE4NTgsImV4cCI6MTY0NjE5MjE1OH0.1zUOnVr8uengXLeHxdoEH1NaZQVzacTxvWIfUt7rKuQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NOM_ROL\":\"invitado2\",\r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/roles/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"roles",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJDT0RfVVNVQVJJT1MiOjEsIk5PTV9VU1VBUklPIjoibWFjYXJpbmFsb3BlencxIiwiQ0xBVkUiOiJCYWxlYWRhIiwiQ09EX0VTVEFETyI6MSwiQ09EX1JPTCI6MX1dLCJpYXQiOjE2NDYxOTA3MzIsImV4cCI6MTY0NjE5MTAzMn0.4ErlcCe7rKI6BbwFu3KvEkTFT7PqOFjPSp0A0liXrn8\"",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar_rol",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJDT0RfVVNVQVJJT1MiOjEsIk5PTV9VU1VBUklPIjoibWFjYXJpbmFsb3BlencxIiwiQ0xBVkUiOiJCYWxlYWRhIiwiQ09EX0VTVEFETyI6MSwiQ09EX1JPTCI6MX1dLCJpYXQiOjE2NDYxOTE4NTgsImV4cCI6MTY0NjE5MjE1OH0.1zUOnVr8uengXLeHxdoEH1NaZQVzacTxvWIfUt7rKuQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NOM_ROL\":\"invitado2\",\r\n    \"NOM_USUARIO\":\"macarinalopezw1\",\r\n    \"COD_ESTADO\":1,\r\n    \"COD_USUARIO\":1,\r\n    \"COD_MODULO\":1,\r\n    \"COD_ROL\":19\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/roles/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"roles",
+						"actualizar"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJDT0RfVVNVQVJJT1MiOjEsIk5PTV9VU1VBUklPIjoibWFjYXJpbmFsb3BlencxIiwiQ0xBVkUiOiJCYWxlYWRhIiwiQ09EX0VTVEFETyI6MSwiQ09EX1JPTCI6MX1dLCJpYXQiOjE2NDYxOTA3MzIsImV4cCI6MTY0NjE5MTAzMn0.4ErlcCe7rKI6BbwFu3KvEkTFT7PqOFjPSp0A0liXrn8\"",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nuevo_rol",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJDT0RfVVNVQVJJT1MiOjEsIk5PTV9VU1VBUklPIjoibWFjYXJpbmFsb3BlencxIiwiQ0xBVkUiOiJCYWxlYWRhIiwiQ09EX0VTVEFETyI6MSwiQ09EX1JPTCI6MX1dLCJpYXQiOjE2NDYxOTE4NTgsImV4cCI6MTY0NjE5MjE1OH0.1zUOnVr8uengXLeHxdoEH1NaZQVzacTxvWIfUt7rKuQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NOM_ROL\":\"invitado2\",\r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/roles/nuevo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"roles",
+						"nuevo"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJDT0RfVVNVQVJJT1MiOjEsIk5PTV9VU1VBUklPIjoibWFjYXJpbmFsb3BlencxIiwiQ0xBVkUiOiJCYWxlYWRhIiwiQ09EX0VTVEFETyI6MSwiQ09EX1JPTCI6MX1dLCJpYXQiOjE2NDYxOTA3MzIsImV4cCI6MTY0NjE5MTAzMn0.4ErlcCe7rKI6BbwFu3KvEkTFT7PqOFjPSp0A0liXrn8\"",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "select_permisos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJDT0RfVVNVQVJJT1MiOjEsIk5PTV9VU1VBUklPIjoibWFjYXJpbmFsb3BlencxIiwiQ0xBVkUiOiJCYWxlYWRhIiwiQ09EX0VTVEFETyI6MSwiQ09EX1JPTCI6MX1dLCJpYXQiOjE2NDYxOTE4NTgsImV4cCI6MTY0NjE5MjE1OH0.1zUOnVr8uengXLeHxdoEH1NaZQVzacTxvWIfUt7rKuQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NOM_USUARIO\":\"invitado2\",\r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/permisos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"permisos",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJDT0RfVVNVQVJJT1MiOjEsIk5PTV9VU1VBUklPIjoibWFjYXJpbmFsb3BlencxIiwiQ0xBVkUiOiJCYWxlYWRhIiwiQ09EX0VTVEFETyI6MSwiQ09EX1JPTCI6MX1dLCJpYXQiOjE2NDYxOTA3MzIsImV4cCI6MTY0NjE5MTAzMn0.4ErlcCe7rKI6BbwFu3KvEkTFT7PqOFjPSp0A0liXrn8\"",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nuevo_permiso",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJDT0RfVVNVQVJJT1MiOjEsIk5PTV9VU1VBUklPIjoibWFjYXJpbmFsb3BlencxIiwiQ0xBVkUiOiJCYWxlYWRhIiwiQ09EX0VTVEFETyI6MSwiQ09EX1JPTCI6MX1dLCJpYXQiOjE2NDYxOTE4NTgsImV4cCI6MTY0NjE5MjE1OH0.1zUOnVr8uengXLeHxdoEH1NaZQVzacTxvWIfUt7rKuQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CREAR\":\"1\",\r\n                \"LEER\":\"2\",\r\n                \"EDITAR\":\"2\",\r\n                \"BORRAR\":\"2\",\r\n                \"COD_ROL\":\"1\",\r\n                \"COD_MODULO\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/permisos/nuevo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"permisos",
+						"nuevo"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJDT0RfVVNVQVJJT1MiOjEsIk5PTV9VU1VBUklPIjoibWFjYXJpbmFsb3BlencxIiwiQ0xBVkUiOiJCYWxlYWRhIiwiQ09EX0VTVEFETyI6MSwiQ09EX1JPTCI6MX1dLCJpYXQiOjE2NDYxOTA3MzIsImV4cCI6MTY0NjE5MTAzMn0.4ErlcCe7rKI6BbwFu3KvEkTFT7PqOFjPSp0A0liXrn8\"",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar_permiso",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJDT0RfVVNVQVJJT1MiOjEsIk5PTV9VU1VBUklPIjoibWFjYXJpbmFsb3BlencxIiwiQ0xBVkUiOiJCYWxlYWRhIiwiQ09EX0VTVEFETyI6MSwiQ09EX1JPTCI6MX1dLCJpYXQiOjE2NDYxOTE4NTgsImV4cCI6MTY0NjE5MjE1OH0.1zUOnVr8uengXLeHxdoEH1NaZQVzacTxvWIfUt7rKuQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CREAR\":\"1\",\r\n                \"LEER\":\"2\",\r\n                \"EDITAR\":\"2\",\r\n                \"BORRAR\":\"2\",\r\n                \"COD_ESTADO\":\"1\",\r\n                \"COD_ROL\":\"1\",\r\n                \"COD_MODULO\":\"1\",\r\n                \"COD_PERMISO\":\"1\",\r\n                \"COD_USUARIO\":\"1\",\r\n                \"NOM_USUARIO\":\"invistado\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/permisos/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"permisos",
+						"actualizar"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJDT0RfVVNVQVJJT1MiOjEsIk5PTV9VU1VBUklPIjoibWFjYXJpbmFsb3BlencxIiwiQ0xBVkUiOiJCYWxlYWRhIiwiQ09EX0VTVEFETyI6MSwiQ09EX1JPTCI6MX1dLCJpYXQiOjE2NDYxOTA3MzIsImV4cCI6MTY0NjE5MTAzMn0.4ErlcCe7rKI6BbwFu3KvEkTFT7PqOFjPSp0A0liXrn8\"",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "select_modulo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJDT0RfVVNVQVJJT1MiOjEsIk5PTV9VU1VBUklPIjoibWFjYXJpbmFsb3BlencxIiwiQ0xBVkUiOiJCYWxlYWRhIiwiQ09EX0VTVEFETyI6MSwiQ09EX1JPTCI6MX1dLCJpYXQiOjE2NDYxOTE4NTgsImV4cCI6MTY0NjE5MjE1OH0.1zUOnVr8uengXLeHxdoEH1NaZQVzacTxvWIfUt7rKuQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NOM_USUARIO\":\"invitado2\",\r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/modulos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"modulos",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJDT0RfVVNVQVJJT1MiOjEsIk5PTV9VU1VBUklPIjoibWFjYXJpbmFsb3BlencxIiwiQ0xBVkUiOiJCYWxlYWRhIiwiQ09EX0VTVEFETyI6MSwiQ09EX1JPTCI6MX1dLCJpYXQiOjE2NDYxOTA3MzIsImV4cCI6MTY0NjE5MTAzMn0.4ErlcCe7rKI6BbwFu3KvEkTFT7PqOFjPSp0A0liXrn8\"",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar_modulo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJDT0RfVVNVQVJJT1MiOjEsIk5PTV9VU1VBUklPIjoibWFjYXJpbmFsb3BlencxIiwiQ0xBVkUiOiJCYWxlYWRhIiwiQ09EX0VTVEFETyI6MSwiQ09EX1JPTCI6MX1dLCJpYXQiOjE2NDYxOTE4NTgsImV4cCI6MTY0NjE5MjE1OH0.1zUOnVr8uengXLeHxdoEH1NaZQVzacTxvWIfUt7rKuQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NOM_MODULO\":\"TIENDA\",\r\n                \"COD_USUARIO\":\"1\",\r\n                \"NOM_USUARIO\":\"invitado2\",\r\n                \"COD_MODULO\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/modulos/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"modulos",
+						"actualizar"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJDT0RfVVNVQVJJT1MiOjEsIk5PTV9VU1VBUklPIjoibWFjYXJpbmFsb3BlencxIiwiQ0xBVkUiOiJCYWxlYWRhIiwiQ09EX0VTVEFETyI6MSwiQ09EX1JPTCI6MX1dLCJpYXQiOjE2NDYxOTA3MzIsImV4cCI6MTY0NjE5MTAzMn0.4ErlcCe7rKI6BbwFu3KvEkTFT7PqOFjPSp0A0liXrn8\"",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nuevo_modulo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJDT0RfVVNVQVJJT1MiOjEsIk5PTV9VU1VBUklPIjoibWFjYXJpbmFsb3BlencxIiwiQ0xBVkUiOiJCYWxlYWRhIiwiQ09EX0VTVEFETyI6MSwiQ09EX1JPTCI6MX1dLCJpYXQiOjE2NDYxOTE4NTgsImV4cCI6MTY0NjE5MjE1OH0.1zUOnVr8uengXLeHxdoEH1NaZQVzacTxvWIfUt7rKuQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NOM_MODULO\":\"facturacion\",\r\n                \"COD_USUARIO\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/modulos/nuevo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"modulos",
+						"nuevo"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJDT0RfVVNVQVJJT1MiOjEsIk5PTV9VU1VBUklPIjoibWFjYXJpbmFsb3BlencxIiwiQ0xBVkUiOiJCYWxlYWRhIiwiQ09EX0VTVEFETyI6MSwiQ09EX1JPTCI6MX1dLCJpYXQiOjE2NDYxOTA3MzIsImV4cCI6MTY0NjE5MTAzMn0.4ErlcCe7rKI6BbwFu3KvEkTFT7PqOFjPSp0A0liXrn8\"",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "select_categoria",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NOM_USUARIO\":\"MPEREZ\",\r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/categorias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "select_productos_categoria",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"COD_CATEGORIA\":\"22\",\r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/categorias/productos_categoria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categorias",
+						"productos_categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nueva_categoria",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"NOM_CATEGORIA\":\"jarrones0s1\",\r\n                \"DES_CATEGORIA\":\"jarrones de barro\",\r\n                \"URL_IMG\":\"1.jgp\",\r\n                 \"COD_MODULO\":\"1\",\r\n                \"COD_USUARIO\":\"1\"\r\n               \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/categorias/nuevo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categorias",
+						"nuevo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar_categoria",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"NOM_CATEGORIA\":\"jarrones255\",\r\n    \"COD_CATEGORIA\":\"1\",\r\n                \"DES_CATEGORIA\":\"jarrones de barro\",\r\n                \"URL_IMG\":\"1.jgp\",\r\n                \"COD_ESTADO\":\"1\",\r\n                 \"COD_MODULO\":\"1\",\r\n                \"COD_USUARIO\":\"1\"\r\n               \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/categorias/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categorias",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar_categoria",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NOM_CATEGORIA\":\"jarroness1\",\r\n    \"NOM_USUARIO\":\"MPEREZ\",\r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/categorias/eliminar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categorias",
+						"eliminar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "select_productos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NOM_USUARIO\":\"MPEREZ\",\r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "select_inventario",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NOM_USUARIO\":\"MPEREZ\",\r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n \r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/productos/inventario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"productos",
+						"inventario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nuevo_inventario_productos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n                         \"SKU\":5,\r\n                        \"NOM_PRODUCTO\":\"jarron\",\r\n                        \"DES_PRODUCTO\":\"jarron de barro\",\r\n                        \"URL_IMG\":\"img.jpg\",\r\n                        \"COD_CATEGORIA\":\"76\",\r\n                        \"COD_PROVEEDOR\":\"14\",\r\n                        \"CAN_INICIAL\":\"1\",\r\n                        \"CAN_ENTRADAS\":\"1\",\r\n                        \"CAN_SALIDAS\":\"0\",\r\n                        \"STOCK\":\"1\",\r\n                        \"PR_PRODUCTO\":\"150\",\r\n                        \"COD_MODULO\":\"1\",\r\n                        \"COD_USUARIO\":\"2\"\r\n               \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/productos/nuevo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"productos",
+						"nuevo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar_producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n                \"SKU\": \"3\",\r\n                \"NOM_USUARIO\": \"MPerez\",\r\n                \"COD_USUARIO\": \"1\",\r\n                \"COD_MODULO\": \"1\"\r\n               \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/productos/eliminar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"productos",
+						"eliminar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "select_proveedores",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NOM_USUARIO\":\"MPEREZ\",\r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n \r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/proveedores/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"proveedores",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nueva_proveedor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"NOM_PROVEEDOR\": \"paco2\",\r\n    \"DIRECCION\": \"nueva armenia\",\r\n    \"NUM_CEL\": \"32432531\",\r\n    \"USER_EMAIL\": \"p@gmail.com\",\r\n    \"COD_MODULO\": \"1\",\r\n    \"COD_USUARIO\": \"1\"\r\n\r\n                    \r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/proveedores/nuevo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"proveedores",
+						"nuevo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar_proveedores",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"COD_PROVEEDOR\":27,\r\n    \"NOM_USUARIO\":\"MPEREZ\",\r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/proveedores/eliminar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"proveedores",
+						"eliminar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "select_metodo_pagos/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NOM_USUARIO\":\"MPEREZ\",\r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n \r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pagos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pagos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nuevo_metodoPago",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"TIP_PAGO\": \"contra entrega\",\r\n     \"DESCRIPCION\": \"contra engrega asd \",\r\n     \"COD_USUARIO\": \"1\",\r\n     \"COD_MODULO\": \"1\"\r\n \r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pagos/nuevo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pagos",
+						"nuevo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar_metodoPago",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"TIP_PAGO\": \"contra\",\r\n     \"DESCRIPCION\": \"contra engrega asd \",\r\n     \"NOM_USUARIO\": \"mvarela\",\r\n                        \"COD_ESTADO\": \"1\",\r\n                        \"COD_USUARIO\": \"1\",\r\n                        \"COD_MODULO\": \"1\",\r\n                        \"COD_PAGO\": \"1\"\r\n\r\n \r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pagos/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pagos",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarr_metodoPago",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"COD_PAGO\": 5,\r\n    \"NOM_USUARIO\": \"mpineda\",\r\n    \"COD_USUARIO\":1,\r\n    \"COD_MODULO\": \"1\"\r\n  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pagos/eliminar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pagos",
+						"eliminar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "select_pedidos_facturados/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NOM_USUARIO\":\"MPEREZ\",\r\n    \"COD_USUARIO\":\"1\",\r\n    \"COD_MODULO\":\"1\"\r\n \r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pedidos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pedidos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nuevo_pedidos_facturados/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CANT_PRODUCTO\": \"1\",\r\n                        \"PR_PRODUCTO\":\"2\",\r\n                        \"MON_PEDIDO\":\"2\",\r\n                        \"COS_ENVIO\":\"2\",\r\n                        \"COD_PRODUCTO\":\"45\",\r\n                        \"COD_PAGO\":\"5\",\r\n                        \"COD_MODULO\":\"1\",\r\n                        \"COD_USUARIO\":\"1\",\r\n                        \"COD_PERSONA\":\"53\",\r\n                        \"COD_DIRECCION\":\"47\"\r\n \r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pedidos/nuevo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pedidos",
+						"nuevo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar_pedidos_facturados/",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"NOM_USUARIO\":\"mperez\",\r\n    \"CANT_PRODUCTO\": \"2\",\r\n                        \"PR_PRODUCTO\":\"2\",\r\n                        \"MON_PEDIDO\":\"9\",\r\n                        \"COS_ENVIO\":\"2\",\r\n                        \"COD_PRODUCTO\":\"45\",\r\n                        \"COD_PAGO\":\"5\",\r\n                        \"COD_MODULO\":\"1\",\r\n                        \"COD_USUARIO\":\"1\",\r\n                        \"COD_PERSONA\":\"53\",\r\n                        \"COD_DIRECCION\":\"47\",\r\n                        \"COD_PEDIDO\":\"15\",\r\n                        \"COD_DETALLE\":\"7\",\r\n                        \"COD_ENCABEZADO\":\"7\"\r\n \r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pedidos/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pedidos",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
